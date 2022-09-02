@@ -13,12 +13,10 @@
 
   <style>
     body {
-      background-color: rgb(248, 249, 250);
+      background-color: #f8f9fa;
     }
   </style>
 </head>
-<script src="https://accounts.google.com/gsi/client" async defer></script>
-<script src="js/oauth.js"></script>
 
 <main class="text-center">
   <div class="abs-center">
@@ -36,12 +34,10 @@
         <input type="password" id="mi-contraseña-input" class="form-control input-text">
         <div id="div-error-pass"></div>
       </div>
-      <br>
-      <div>
-        <input type="submit" class="input-submit">
+      <div class="botones">
+        <button id="boton" type="submit" class="w-100 btn btn-lg btn-primary">Ingresar</button>
       </div>
-      <br>
-    <div id="buttonDiv"></div> 
+    <div id="buttonDiv" class="botones"></div> 
     </form>
   </div>
 </main>
@@ -56,6 +52,8 @@
   </div>
 </footer>
 <script src="js/login.js"></script>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script src="js/oauth.js"></script>
 </body>
 
 </html>

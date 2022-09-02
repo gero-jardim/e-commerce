@@ -39,3 +39,8 @@ let getJSONData = function(url){
         return result;
     });
 }
+
+document.addEventListener('DOMContentLoaded', function(){
+  let mail = localStorage.getItem('Email');
+  document.getElementById('mail-navbar').innerHTML = `<p class= 'nav-link'>${mail}</p>`;
+})

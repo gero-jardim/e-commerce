@@ -43,3 +43,8 @@ input{
     margin: 0px;
     color: rgb(200, 25, 25);
 }
+
+.botones{
+    margin: 15px;
+    margin-bottom: 0px;
+}
