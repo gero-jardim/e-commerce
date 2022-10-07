@@ -11,16 +11,18 @@ let productos = [];
 let productosOrdenados = [];
 
 function crearElemento(producto) {
-    document.getElementById('principal').innerHTML +=
-        `<div onclick="setCatID(101)" class="list-group-item list-group-item-action cursor-active"><div class="row"><div class="col-3"><img src="${producto.image}" alt="auto" class="img-thumbnail"></div><div class="col"><div class="d-flex w-100 justify-content-between"><h4 class="mb-1">${producto.name} - ${producto.currency} ${producto.cost}</h4><small class="text-muted">${producto.soldCount} vendidos</small></div><p class="mb-1">${producto.description}</p></div></div></div>`
+    console.log(producto);
+    let boton = document.createElement('button');
+    boton.setAttribute('class', 'd-flex border-0 p-0 m-0');
+    document.getElementById('principal').appendChild(boton);
+    boton.innerHTML +=
+        `<div class="list-group-item list-group-item-action cursor-active"><div class="row"><div class="col-3"><img src="${producto.image}" alt="auto" class="img-thumbnail"></div><div class="col"><div class="d-flex w-100 justify-content-between"><h4 class="mb-1">${producto.name} - ${producto.currency} ${producto.cost}</h4><small class="text-muted">${producto.soldCount} vendidos</small></div><p class="text-start mb-1">${producto.description}</p></div></div></div>`;
+    boton.addEventListener('click', function(e){
+        localStorage.setItem('objID', producto.id);
+        window.location.href = 'product-info.html';
+    })
 }
 
-
-/* function ordenarElementos(a, b) {
-    if (a.cost < b.cost) { return -1; }
-    else if (a.cost > b.cost) { return 1; }
-    else { return 0; };
-} */
 
 function filtrarProductos(productos) {
     let productosFiltrados = productos.filter(producto => {

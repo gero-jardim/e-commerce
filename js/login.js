@@ -52,8 +52,8 @@ document.addEventListener("DOMContentLoaded", function () {
     miFormulario.addEventListener('submit', function (evento) {
         let miMail = miMailInput.value;
         let miPass = miPassInput.value;
-        localStorage.setItem('Email', miMail);
         evento.preventDefault();
+        localStorage.setItem('Email', miMail);
         checkCredentials(miMail, miPass);
     });
 })

@@ -42,5 +42,18 @@ let getJSONData = function(url){
 
 document.addEventListener('DOMContentLoaded', function(){
   let mail = localStorage.getItem('Email');
-  document.getElementById('mail-navbar').innerHTML = `<p class= 'nav-link'>${mail}</p>`;
+  document.getElementById('mail-navbar').innerHTML = `<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    ${mail}
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="cart.html">Mi carrito</a></li>
+    <li><a class="dropdown-item" href="my-profile.html">Mi perfil</a></li>
+    <li id="logout" class="cursor-active"><a class="dropdown-item">Cerrar sesión</a></li>
+  </ul>
+</div>`;
+  document.getElementById('logout').addEventListener('click', function(e){
+    localStorage.removeItem('Email');
+    window.location.href = 'index.html';
+  })
 })

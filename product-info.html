@@ -10,6 +10,8 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styleobj.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -37,9 +39,32 @@
     </div>
   </nav>
   <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+    <div id="contenedorObj" class="p-4">
+    </div>
+    <h2 class="p-4 pb-2">Comentarios:</h2>
+    <div id="divCom" class="card-group flex-column p-4">
+    </div>
+    <div id="formCom" class="p-4">
+      <h3>Comentar</h3>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Tu opinion:</label>
+        <textarea id="textarea" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <div class="mb-3">
+        <select id="select" class="form-select" aria-label="Default select example">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <button id="btnEnviar" type="button" class="btn btn-primary">Enviar</button>
+      <hr>
+    </div>
+    <div>
+      <h3 class="ps-4 pb-2 text-center">Productos relacionados:</h3>
+      <div id="related" class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
       </div>
     </div>
   </main>
